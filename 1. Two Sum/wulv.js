@@ -20,3 +20,17 @@ var twoSum = function(nums, target) {
     }
   }
 };
+
+//第二种算法
+var twoSum = function(nums, target) {
+  var len = nums.length,tem={};
+  for (var i = 0; i < len; i++) {
+    tem[nums[i]] = i;
+  }
+  for (var i = 0; i < len; i++) {
+    var cha = target - nums[i];
+    if(tem[cha] != undefined && i != tem[cha]){
+        return [i,tem[cha]]
+    }
+  }
+};
