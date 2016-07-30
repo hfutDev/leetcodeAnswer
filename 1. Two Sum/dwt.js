@@ -29,8 +29,7 @@ var twoSum = function(nums, target) {
     }
 };
 
-// 学习下别的大神怎么解题的
-
+// 学习下别的大神怎么解题的 
 var twoSum = function(nums, target) {
     var length = nums.length;
     box = {};
