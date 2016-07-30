@@ -28,3 +28,19 @@ var twoSum = function(nums, target) {
         }
     }
 };
+
+// 学习下别的大神怎么解题的
+
+var twoSum = function(nums, target) {
+    var length = nums.length;
+    box = {};
+    for(var i = 0; i < length; i++) {
+        box[nums[i]] = i;
+    }
+    for(var i = 0; i < length; i++) {
+        var rest = target - nums[i];
+        if(box[rest] !== undefined && box[rest] !== i) {
+            return [i, box[rest]];
+        }
+    }
+}
